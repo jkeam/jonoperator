@@ -1,0 +1,8 @@
+apiVersion: kopf.dev/v1
+kind: Jon
+metadata:
+  name: test-jon
+  namespace: jon
+spec:
+  coolness: extreme
+  replicas: 1
