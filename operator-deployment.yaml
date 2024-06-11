@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jonoperator
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      application: jonoperator
+  template:
+    metadata:
+      labels:
+        application: jonoperator
+    spec:
+      containers:
+      - name: jonoperator
+        image: quay.io/jkeam/jonoperator
